@@ -36,5 +36,7 @@ defmodule ChatterApi.Endpoint do
     key: "_chatter_api_key",
     signing_salt: "I7gw9NsG"
 
+  plug CORSPlug
+
   plug ChatterApi.Router
 end
