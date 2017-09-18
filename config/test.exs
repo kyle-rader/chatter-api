@@ -17,3 +17,6 @@ config :chatter_api, ChatterApi.Repo,
   database: "chatter_api_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+  config :guardian, Guardian,
+    secret_key: "ys1JHd+reat5nRpGTPqYmwAPuQxRHodn2z9lep1iaWlrzOovbkgwi8M/1lZzxQkw"

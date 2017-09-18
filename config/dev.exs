@@ -42,3 +42,6 @@ config :chatter_api, ChatterApi.Repo,
   database: "chatter_api_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :guardian, Guardian,
+  secret_key: "Hx0INzCEVWQkhPll+/cn4hOk61GjxtrWTztKlWyl40ybpmeJgYm5oQIYoO9QGKaw"

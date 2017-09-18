@@ -40,6 +40,7 @@ defmodule ChatterApi.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:cors_plug, "~> 1.4"},
+      {:guardian, "~> 0.14.5"},
     ]
   end
 
