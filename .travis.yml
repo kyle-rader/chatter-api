@@ -1,0 +1,17 @@
+language: elixir
+elixir:
+- 1.5
+otp_release:
+- 19.3
+sudo: false
+addons:
+  postgresql: '9.6'
+before_script:
+- psql -c 'create database chatter_api_test;' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: pDI842hWWBynEqyH5ATnZBfnDjV8pZ/fA/Pof6L9Ab37Olm3BB7AKz6cbyYyZRVNSK3XZLDL0L9ngCB3k5Ueykr6CsevXmcycfp1Y7Gqtbtp0S5fGd/42PhufejSCmtQYbmkWT4qOQi74aty9mDd3PmzQJXd9xS8N50fautEm5uUC3RzirjjoeDTgSrYyXQ7YoJr0MS9vSaB1KEV/uiy4WtHCEWrUVGeDAKPVsGCNGH8E8TLsCXOqQHew8fuPuqEju0FaIv4qG0wZGW6wknhh5lgtWfkiSYilrLRhJyy4QupWkr5Ug8YCTYG1NviHe4EKhA9RwCdJDTHCcfXskV+ii9Nro01Upg49fioZVR1bOBUgaUeFVElUt5OZoKvpLGZKtmuX0+1UJxqiUmnT+bob4XGxVqxzpJjmUK7oIrPWAvxtH96M80l2rmldWPlq+YErVxKzFFdiOPiOFWk477867wKeniGZ9Sz4n1B0bbXramM7lgDgzgXGeMb8ZyxKFspcmfsefc84v6HR0sbfuswcbde91pcgpH7Hp6ZcWv4uK7agQ9lE3YkkAsBZehWHd+eOcoVItF1lRj5U3HSACkgYRTosPJSvwwHyAj4zBxuDketaubnha9q0Ir/L2+rIielnglKkUVQHt+X9eFVEw0xZCAB85I85S/MSxLZrzjUfto=
+  app: kr-chatter-api
+  on:
+    repo: kyle-rader/chatter-api
