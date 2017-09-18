@@ -21,7 +21,7 @@ config :chatter_api, ChatterApi.Endpoint,
 config :chatter_api, ChatterApi.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
-  pool_size: 20
+  pool_size: 15
 
 # Do not print debug messages in production
 config :logger, level: :info
