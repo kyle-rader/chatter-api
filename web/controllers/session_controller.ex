@@ -4,6 +4,6 @@ defmodule ChatterApi.SessionController do
   def index(conn, _params) do
     # Return some static JSON
     conn
-    |> json(%{status: "Ok"})
+    |> json(%{status: "ok"})
   end
 end
